@@ -240,7 +240,7 @@
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.04 });
   bloques.forEach((b) => {
     const padre = b.parentElement && b.parentElement.closest('.revela');
-    if (padre) return;
+    if (padre || b.closest('[data-propio]')) return;
     const r = b.getBoundingClientRect();
     if (r.top < innerHeight && r.bottom > 0) return; /* lo que ya se ve, se queda quieto */
     b.classList.add('revela'); io.observe(b);
