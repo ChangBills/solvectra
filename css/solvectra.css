@@ -315,13 +315,6 @@ html.cambia-tema body, html.cambia-tema section, html.cambia-tema .barra, html.c
   .hero-ficha { animation: flota 7s ease-in-out 1.4s infinite; }
   @keyframes flota { 50% { transform: translateY(-8px); } }
 
-  .anima .hero .etiqueta, .anima .hero h1, .anima .hero .sub, .anima .hero .chips, .anima .hero .botones, .anima .hero .hero-arte { animation: entra .9s cubic-bezier(.2,.75,.2,1) both; }
-  .anima .hero h1 { animation-delay: .12s; }
-  .anima .hero .sub { animation-delay: .24s; }
-  .anima .hero .chips { animation-delay: .34s; }
-  .anima .hero .botones { animation-delay: .44s; }
-  .anima .hero .hero-arte { animation-delay: .3s; }
-  @keyframes entra { from { opacity: 0; transform: translateY(18px); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
   .hero h1 span { background: linear-gradient(90deg, #FFC22E, #FFE08A 45%, #F5A300 55%, #FFC22E); background-size: 220% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: brillo-tit 6s ease-in-out 1.2s infinite; }
   @keyframes brillo-tit { 0%, 70%, 100% { background-position: 100% 0; } 85% { background-position: 0 0; } }
 
@@ -539,3 +532,30 @@ html.cambia-tema body, html.cambia-tema section, html.cambia-tema .barra, html.c
 }
 #servicio { overflow-x: clip; }
 .hito { pointer-events: none; } .hito-tarjeta { pointer-events: auto; }
+
+/* =========================================================
+   Intro del hero (al cargar la página)
+   power2.out = cubic-bezier(.215, .61, .355, 1)
+   Solo se animan opacity y transform: el espacio está reservado desde el inicio,
+   así que nada se mueve ni provoca reflow.
+   ========================================================= */
+.hero-intro { margin-bottom: 26px; }
+.intro-marca { display: flex; align-items: center; gap: 14px; height: 56px; }
+.intro-marca img { width: 56px; height: 56px; flex: none; }
+.intro-nombre { font-family: var(--fuente-titulos); font-weight: 700; font-size: 1.55rem; line-height: 56px; letter-spacing: .14em; text-transform: uppercase; color: var(--blanco); white-space: nowrap; }
+.intro-frase { margin: 10px 0 0; min-height: 1.5em; font-size: 1.02rem; line-height: 1.5; color: var(--azul-cielo); }
+html.hi-on .intro-marca, html.hi-on .intro-frase { opacity: 0; }
+html.hi-on.hi-ya .intro-marca { animation: intro-marca .45s cubic-bezier(.215,.61,.355,1) 0s both; }
+html.hi-on.hi-ya .intro-frase { animation: intro-frase .35s cubic-bezier(.215,.61,.355,1) .25s both; }
+@keyframes intro-marca { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes intro-frase { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+  html.hi-on .intro-marca, html.hi-on .intro-frase { opacity: 1; animation: none; }
+}
+@media (max-width: 600px) {
+  .hero-intro { margin-bottom: 20px; }
+  .intro-marca { gap: 12px; height: 48px; }
+  .intro-marca img { width: 48px; height: 48px; }
+  .intro-nombre { font-size: 1.3rem; line-height: 48px; }
+  .intro-frase { font-size: .95rem; min-height: 3em; }
+}
