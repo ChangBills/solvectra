@@ -11,24 +11,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/solvectra.css?v=20261119">
+  <link rel="stylesheet" href="css/solvectra.css?v=20261119b">
   <script>
-    /* Intro del hero: logo + nombre (0.45 s) y frase (0.35 s, +0.25 s). Se dispara al cargar la página,
-       cuando ya hay DOM y las fuentes están listas (máx. 150 ms de espera) para que el texto no cambie de tamaño a media animación.
-       Con prefers-reduced-motion no se agrega la clase y todo aparece sin animación. */
+    /* Intro: (1) «cine»: intro de pantalla completa (js/intro.js): el sol gira alrededor del panel, choca y forma el logo.
+       (2) «hi-on/hi-ya»: al terminar, el logo, el nombre y la frase del hero entran con fade + rise.
+       Con prefers-reduced-motion no se agrega ninguna clase: todo se ve de inmediato y sin animación. */
     (function(){var h=document.documentElement;
       if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)return;
-      h.classList.add("hi-on");
-      var hecho=false;function go(){if(hecho)return;hecho=true;requestAnimationFrame(function(){h.classList.add("hi-ya");});}
-      document.addEventListener("DOMContentLoaded",function(){
-        var f=document.fonts&&document.fonts.ready;
-        if(f)Promise.race([f,new Promise(function(r){setTimeout(r,150);})]).then(go);else go();
-      });
-      setTimeout(go,1000);})();
+      h.classList.add("hi-on","cine");
+      var hecho=false;window.__heroGo=function(){if(hecho)return;hecho=true;requestAnimationFrame(function(){h.classList.add("hi-ya");});};
+      /* salvavidas: si algo falla, a los 6 s se quita el velo y se muestra la página */
+      setTimeout(function(){h.classList.remove("cine");var v=document.getElementById("cine");if(v)v.remove();window.__heroGo();},6000);})();
   </script>
   <script>(function(){try{var t=localStorage.getItem("solvectra-tema");if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"oscuro":"claro";document.documentElement.dataset.tema=t;}catch(e){}})();</script>
 </head>
 <body>
+<script src="js/intro.js?v=20261119"></script>
 <a class="saltar" href="#contenido">Saltar al contenido</a>
 
 <header class="barra">
