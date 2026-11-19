@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/solvectra.css?v=20261119b">
+  <link rel="stylesheet" href="css/solvectra.css?v=20261119c">
   <script>
     /* Intro: (1) «cine»: intro de pantalla completa (js/intro.js): el sol gira alrededor del panel, choca y forma el logo.
        (2) «hi-on/hi-ya»: al terminar, el logo, el nombre y la frase del hero entran con fade + rise.
@@ -62,11 +62,7 @@
           </div>
           <p class="intro-frase">Ingeniería fotovoltaica en México, con números claros.</p>
         </div>
-        <h1>Energía solar dimensionada con <span>ingeniería, no con promesas.</span></h1>
-        <p class="sub">Convertimos el consumo real de tu escuela, hogar o negocio en una propuesta técnica y económica clara: qué se instalaría, cuánto costaría, cuánto podrías ahorrar y por qué confiar en los números.</p>
-        <ul class="chips" aria-label="Nuestro método">
-          <li>Modelar</li><li>Dimensionar</li><li>Seleccionar</li><li>Cotizar</li><li>Validar</li><li>Convencer</li>
-        </ul>
+<h1 class="titulo-hero" aria-label="Energía solar dimensionada con ingeniería, no con promesas."><span aria-hidden="true"><span class="w"><i style="--n:0">Energía</i></span> <span class="w"><i style="--n:1">solar</i></span> <span class="w"><i style="--n:2">dimensionada</i></span> <span class="w"><i style="--n:3">con</i></span> <span class="dest"><span class="w"><i style="--n:4">ingeniería,</i></span> <span class="w"><i style="--n:5">no</i></span> <span class="w"><i style="--n:6">con</i></span> <span class="w"><i style="--n:7">promesas.</i></span></span></span></h1>
         <div class="botones">
           <a class="btn btn-primario" href="#cotizador">
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 7h8M8 11.5h2M12 11.5h0M15.5 11.5h.5M8 15h2M12 15h0M15.5 15h.5M8 18h2M12 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -125,55 +121,60 @@
         <div class="hero-ficha">
           <strong>Tu propuesta incluye</strong>
           <ul>
-            <li>Consumo en kW y kWh</li>
-            <li>Paneles, inversor y baterías reales</li>
-            <li>Presupuesto con fuentes</li>
-            <li>Ahorro y retorno estimados</li>
-            <li>Reporte PDF para decidir</li>
+            <li style="--n:0">Consumo en kW y kWh</li>
+            <li style="--n:1">Equipos reales</li>
+            <li style="--n:2">Presupuesto con fuentes</li>
+            <li style="--n:3">Ahorro y retorno</li>
+            <li style="--n:4">Reporte PDF</li>
           </ul>
         </div>
       </div>
     </div>
+    <a class="desliza" href="#nosotros" aria-label="Bajar a la siguiente sección"><span class="desliza-raton" aria-hidden="true"><span></span></span><span class="desliza-txt">Desliza</span></a>
   </section>
 
   <!-- Compromisos -->
   <div class="promesas-banda">
-    <div class="contenedor promesas">
-      <div class="promesa"><b>Equipos que existen</b><span>Marca, modelo, ficha técnica, precio, proveedor y fecha de consulta.</span></div>
-      <div class="promesa"><b>Cálculos a la vista</b><span>Cada cifra dice de dónde viene y con qué fórmula se obtuvo.</span></div>
-      <div class="promesa"><b>Sin ahorros garantizados</b><span>Mostramos hipótesis y límites; no exageramos beneficios.</span></div>
-      <div class="promesa"><b>Todo en tu navegador</b><span>Sin registros ni bases de datos: tu información no sale de tu equipo.</span></div>
-    </div>
+    <ul class="contenedor promesas">
+      <li class="promesa" style="--n:0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7 9 18l-5-5"/></svg>Equipos reales</li>
+      <li class="promesa" style="--n:1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h7"/><path d="m15 16 2 2 4-4"/></svg>Cálculos a la vista</li>
+      <li class="promesa" style="--n:2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 4.4 3.4 8.3 8 9 4.6-.7 8-4.6 8-9V6Z"/></svg>Sin promesas infladas</li>
+      <li class="promesa" style="--n:3"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Todo en tu navegador</li>
+    </ul>
   </div>
 
   <!-- ============ 2. Quiénes somos ============ -->
   <section id="nosotros">
-    <div class="contenedor dos-col">
-      <div>
-        <span class="etiqueta">Quiénes somos</span>
-        <h2>Antes de vender un panel, entendemos el circuito.</h2>
-        <p class="intro">Solvectra es una consultoría de ingeniería fotovoltaica. Nacimos en el aula de Análisis de Circuitos Eléctricos con una idea sencilla: una propuesta solar debe poder explicarse con voltaje, corriente, potencia y energía, no con frases de venta.</p>
-        <p>Por eso diseñamos cada sistema a partir de lo que el cliente realmente consume, elegimos componentes que se pueden comprar hoy y verificamos que sean compatibles entre sí. El resultado es una cotización que un director de escuela, una familia o el dueño de un negocio puede leer, entender y comparar.</p>
-        <div class="marca-historia">
-          <img src="assets/favicon-solvectra.svg" alt="" width="56" height="56">
-          <p><strong>«Amanecer en celdas».</strong> Nuestro símbolo son las celdas de un panel que se encienden del azul al amarillo: la luz que se vuelve electricidad, paso a paso.</p>
-        </div>
+    <div class="contenedor">
+      <span class="etiqueta">Quiénes somos</span>
+      <div class="nosotros-escena">
+        <h2 class="frase-luz" data-propio>Antes de vender un panel, entendemos el circuito. Diseñamos cada sistema con lo que realmente consumes, con equipos que puedes comprar hoy y con números que puedes comprobar.</h2>
+        <figure class="simbolo-vivo" data-vista>
+          <svg viewBox="8 8 184 184" aria-hidden="true"><defs><clipPath id="sv-c"><circle cx="100" cy="100" r="92"/></clipPath></defs><g clip-path="url(#sv-c)"><rect class="lc" x="40.8" y="10" width="25.8" height="25.8" rx="5" fill="#2F80ED" style="--d:0.69s"/><rect class="lc" x="71.7" y="10" width="25.8" height="25.8" rx="5" fill="#F5A300" style="--d:0.80s"/><rect class="lc" x="102.5" y="10" width="25.8" height="25.8" rx="5" fill="#F5A300" style="--d:0.90s"/><rect class="lc" x="133.3" y="10" width="25.8" height="25.8" rx="5" fill="#FFC22E" style="--d:1.00s"/><rect class="lc" x="10" y="40.8" width="25.8" height="25.8" rx="5" fill="#0F4DBC" style="--d:0.49s"/><rect class="lc" x="40.8" y="40.8" width="25.8" height="25.8" rx="5" fill="#0F4DBC" style="--d:0.59s"/><rect class="lc" x="71.7" y="40.8" width="25.8" height="25.8" rx="5" fill="#2F80ED" style="--d:0.69s"/><rect class="lc" x="102.5" y="40.8" width="25.8" height="25.8" rx="5" fill="#F5A300" style="--d:0.80s"/><rect class="lc" x="133.3" y="40.8" width="25.8" height="25.8" rx="5" fill="#F5A300" style="--d:0.90s"/><rect class="lc" x="164.2" y="40.8" width="25.8" height="25.8" rx="5" fill="#FFC22E" style="--d:1.00s"/><rect class="lc n" x="10" y="71.7" width="25.8" height="25.8" rx="5" fill="#0B2A5B" style="--d:0.39s"/><rect class="lc" x="40.8" y="71.7" width="25.8" height="25.8" rx="5" fill="#0F4DBC" style="--d:0.49s"/><rect class="lc" x="71.7" y="71.7" width="25.8" height="25.8" rx="5" fill="#0F4DBC" style="--d:0.59s"/><rect class="lc" x="102.5" y="71.7" width="25.8" height="25.8" rx="5" fill="#2F80ED" style="--d:0.69s"/><rect class="lc" x="133.3" y="71.7" width="25.8" height="25.8" rx="5" fill="#F5A300" style="--d:0.80s"/><rect class="lc" x="164.2" y="71.7" width="25.8" height="25.8" rx="5" fill="#F5A300" style="--d:0.90s"/><rect class="lc n" x="10" y="102.5" width="25.8" height="25.8" rx="5" fill="#0B2A5B" style="--d:0.29s"/><rect class="lc n" x="40.8" y="102.5" width="25.8" height="25.8" rx="5" fill="#0B2A5B" style="--d:0.39s"/><rect class="lc" x="71.7" y="102.5" width="25.8" height="25.8" rx="5" fill="#0F4DBC" style="--d:0.49s"/><rect class="lc" x="102.5" y="102.5" width="25.8" height="25.8" rx="5" fill="#0F4DBC" style="--d:0.59s"/><rect class="lc" x="133.3" y="102.5" width="25.8" height="25.8" rx="5" fill="#2F80ED" style="--d:0.69s"/><rect class="lc" x="164.2" y="102.5" width="25.8" height="25.8" rx="5" fill="#F5A300" style="--d:0.80s"/><rect class="lc n" x="10" y="133.3" width="25.8" height="25.8" rx="5" fill="#0B2A5B" style="--d:0.19s"/><rect class="lc n" x="40.8" y="133.3" width="25.8" height="25.8" rx="5" fill="#0B2A5B" style="--d:0.29s"/><rect class="lc n" x="71.7" y="133.3" width="25.8" height="25.8" rx="5" fill="#0B2A5B" style="--d:0.39s"/><rect class="lc" x="102.5" y="133.3" width="25.8" height="25.8" rx="5" fill="#0F4DBC" style="--d:0.49s"/><rect class="lc" x="133.3" y="133.3" width="25.8" height="25.8" rx="5" fill="#0F4DBC" style="--d:0.59s"/><rect class="lc" x="164.2" y="133.3" width="25.8" height="25.8" rx="5" fill="#2F80ED" style="--d:0.69s"/><rect class="lc n" x="40.8" y="164.2" width="25.8" height="25.8" rx="5" fill="#0B2A5B" style="--d:0.19s"/><rect class="lc n" x="71.7" y="164.2" width="25.8" height="25.8" rx="5" fill="#0B2A5B" style="--d:0.29s"/><rect class="lc n" x="102.5" y="164.2" width="25.8" height="25.8" rx="5" fill="#0B2A5B" style="--d:0.39s"/><rect class="lc" x="133.3" y="164.2" width="25.8" height="25.8" rx="5" fill="#0F4DBC" style="--d:0.49s"/></g></svg>
+          <figcaption><b>«Amanecer en celdas»</b><span>La luz que se vuelve electricidad.</span></figcaption>
+        </figure>
       </div>
       <div class="rejilla valores">
-        <article class="tarjeta">
+        <article class="tarjeta valor plegable">
           <span class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 4.4 3.4 8.3 8 9 4.6-.7 8-4.6 8-9V6l-8-3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           <h3>Misión</h3>
-          <p>Transformar la consulta de un cliente en una propuesta solar confiable, comprensible y lista para tomar una decisión informada.</p>
+          <p class="corto">Propuestas solares claras y confiables.</p>
+          <button type="button" class="ver-mas" aria-expanded="false" aria-controls="v-1"><span>Ver más</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="hito-det" id="v-1"><div class="det-in"><p>Transformar la consulta de un cliente en una propuesta solar confiable, comprensible y lista para tomar una decisión informada.</p></div></div>
         </article>
-        <article class="tarjeta">
+        <article class="tarjeta valor plegable">
           <span class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2.5 12S6 5 12 5s9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
           <h3>Visión</h3>
-          <p>Que cada escuela, hogar y negocio que piense en energía solar pueda hacerlo con datos verificables, en línea con el ODS 7 de energía asequible y no contaminante.</p>
+          <p class="corto">Energía solar decidida con datos.</p>
+          <button type="button" class="ver-mas" aria-expanded="false" aria-controls="v-2"><span>Ver más</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="hito-det" id="v-2"><div class="det-in"><p>Que cada escuela, hogar y negocio que piense en energía solar pueda hacerlo con datos verificables, en línea con el ODS 7 de energía asequible y no contaminante.</p></div></div>
         </article>
-        <article class="tarjeta">
+        <article class="tarjeta valor plegable">
           <span class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
           <h3>Valores</h3>
-          <p><strong>Rigor</strong> en cada cálculo, <strong>transparencia</strong> en cada precio y <strong>claridad</strong> para quien no es especialista.</p>
+          <p class="corto">Rigor · Transparencia · Claridad</p>
+          <button type="button" class="ver-mas" aria-expanded="false" aria-controls="v-3"><span>Ver más</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="hito-det" id="v-3"><div class="det-in"><p><strong>Rigor</strong> en cada cálculo, <strong>transparencia</strong> en cada precio y <strong>claridad</strong> para quien no es especialista.</p></div></div>
         </article>
       </div>
     </div>
@@ -184,7 +185,7 @@
     <div class="contenedor">
       <span class="etiqueta">Nuestro servicio</span>
       <h2>Una propuesta solar completa, en siete partes</h2>
-      <p class="intro">Cada proyecto pasa por las mismas siete etapas de ingeniería. Baja para recorrerlas y toca «Ver más» en la que quieras conocer a fondo.</p>
+      <p class="intro">Baja para recorrerlas; toca «Ver más» si quieres el detalle.</p>
       <div class="ruta-env" id="ruta" data-propio>
       <span class="ruta-linea" aria-hidden="true"><span class="ruta-relleno"></span></span>
       <ol class="ruta">
@@ -323,27 +324,43 @@
 
       <h3 class="sub-tit" id="clientes">Para quién trabajamos</h3>
       <div class="rejilla clientes">
-        <div class="cliente"><span class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10 12 4l9 6M5 9v11h14V9M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><div><b>Escuelas</b><span>Aulas, laboratorios y oficinas que usan energía de día, justo cuando hay sol.</span></div></div>
-        <div class="cliente"><span class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11 12 4l8 7v9H4Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><div><b>Hogares</b><span>Familias que quieren saber, con su recibo en la mano, si la energía solar les conviene.</span></div></div>
-        <div class="cliente"><span class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h18l-1.5-5h-15ZM4 9v11h16V9M9 20v-6h6v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><div><b>Negocios</b><span>Comercios y oficinas que necesitan una inversión justificada y un retorno claro.</span></div></div>
+        <div class="cliente"><span class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10 12 4l9 6M5 9v11h14V9M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><div><b>Escuelas</b><span>Consumen de día, cuando hay sol.</span></div></div>
+        <div class="cliente"><span class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11 12 4l8 7v9H4Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 20v-5h4v5" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><div><b>Hogares</b><span>Decide con tu recibo en la mano.</span></div></div>
+        <div class="cliente"><span class="icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h18l-1.5-5h-15ZM4 9v11h16V9M9 20v-6h6v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><div><b>Negocios</b><span>Inversión justificada, retorno claro.</span></div></div>
       </div>
     </div>
   </section>
 
   <!-- ============ 4. Proceso ============ -->
-  <section id="proceso">
-    <div class="contenedor">
-      <span class="etiqueta">Cómo trabajamos</span>
-      <h2>Del recibo de luz a una decisión informada</h2>
-      <p class="intro">Seis pasos que siguen el mismo orden que usa un ingeniero: primero entender, luego calcular y al final comunicar.</p>
-      <ol class="proceso">
-        <li class="paso"><span class="paso-n">01</span><b>Modelar</b><span>Levantamos el inventario de cargas y las horas de uso.</span></li>
-        <li class="paso"><span class="paso-n">02</span><b>Dimensionar</b><span>Calculamos potencia, energía, paneles y baterías.</span></li>
-        <li class="paso"><span class="paso-n">03</span><b>Seleccionar</b><span>Elegimos equipos reales y compatibles entre sí.</span></li>
-        <li class="paso"><span class="paso-n">04</span><b>Cotizar</b><span>Armamos el presupuesto con precios rastreables.</span></li>
-        <li class="paso"><span class="paso-n">05</span><b>Validar</b><span>Revisamos cada resultado con casos calculados a mano.</span></li>
-        <li class="paso"><span class="paso-n">06</span><b>Convencer</b><span>Te entregamos un reporte claro, honesto y profesional.</span></li>
-      </ol>
+  <section id="proceso" class="proceso-sec">
+    <div class="pp-pista" id="pp-pista" data-propio>
+      <div class="pp-fijo">
+        <div class="contenedor pp-escena">
+          <div class="pp-cab">
+            <span class="etiqueta">Cómo trabajamos</span>
+            <h2>Del recibo de luz a una decisión</h2>
+            <div class="pp-puntos" role="group" aria-label="Pasos del proceso">
+              <button type="button" class="pp-punto activo" data-i="0" aria-label="Paso 1: Modelar"><span>Modelar</span></button>
+              <button type="button" class="pp-punto" data-i="1" aria-label="Paso 2: Dimensionar"><span>Dimensionar</span></button>
+              <button type="button" class="pp-punto" data-i="2" aria-label="Paso 3: Seleccionar"><span>Seleccionar</span></button>
+              <button type="button" class="pp-punto" data-i="3" aria-label="Paso 4: Cotizar"><span>Cotizar</span></button>
+              <button type="button" class="pp-punto" data-i="4" aria-label="Paso 5: Validar"><span>Validar</span></button>
+              <button type="button" class="pp-punto" data-i="5" aria-label="Paso 6: Convencer"><span>Convencer</span></button>
+            </div>
+          </div>
+          <div class="pp-etapa">
+            <svg class="pp-anillo" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="54"/><circle class="pp-avance" cx="60" cy="60" r="54" pathLength="1"/></svg>
+            <ol class="pp-lista">
+            <li class="pp activo" data-i="0"><span class="pp-n">01</span><b class="pp-t">Modelar</b><span class="pp-d">Inventario de cargas y horas de uso.</span></li>
+            <li class="pp" data-i="1"><span class="pp-n">02</span><b class="pp-t">Dimensionar</b><span class="pp-d">Potencia, energía, paneles y baterías.</span></li>
+            <li class="pp" data-i="2"><span class="pp-n">03</span><b class="pp-t">Seleccionar</b><span class="pp-d">Equipos reales y compatibles.</span></li>
+            <li class="pp" data-i="3"><span class="pp-n">04</span><b class="pp-t">Cotizar</b><span class="pp-d">Presupuesto con precios rastreables.</span></li>
+            <li class="pp" data-i="4"><span class="pp-n">05</span><b class="pp-t">Validar</b><span class="pp-d">Cada resultado contra un cálculo a mano.</span></li>
+            <li class="pp" data-i="5"><span class="pp-n">06</span><b class="pp-t">Convencer</b><span class="pp-d">Un reporte claro, honesto y profesional.</span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -352,7 +369,7 @@
     <div class="contenedor">
       <span class="etiqueta">Cotizador Solvectra</span>
       <h2>Calcula cuántos paneles necesitas</h2>
-      <p class="intro">Este estimador rápido te da una primera idea del tamaño de tu sistema con los datos de tu recibo. Es una aproximación preliminar: el cotizador completo, con inversor, baterías, precios y reporte PDF, está en desarrollo.</p>
+      <p class="intro">Con tu recibo de luz, una primera estimación en un minuto.</p>
 
       <div class="cotizador">
         <form class="cot-form" id="cot-form" novalidate>
@@ -439,25 +456,40 @@
     <div class="contenedor">
       <span class="etiqueta">Por qué confiar</span>
       <h2>Cada número dice de dónde viene</h2>
-      <p class="intro">Una propuesta convincente no exagera beneficios. Por eso cada cifra lleva un sello que indica su origen, y lo que no sabemos lo decimos.</p>
       <div class="dos-col confianza">
-        <ul class="sellos-lista">
-          <li><span class="sello oficial">Dato oficial</span><span>Publicado por un fabricante, la CFE u otra fuente oficial, con su referencia.</span></li>
-          <li><span class="sello calculo">Cálculo</span><span>Obtenido con una fórmula que te mostramos y puedes comprobar.</span></li>
-          <li><span class="sello medido">Medición propia</span><span>Lo medimos nosotros con instrumentos, y guardamos la evidencia.</span></li>
-          <li><span class="sello placa">Etiqueta del panel</span><span>Leído en la placa de datos del equipo.</span></li>
-          <li><span class="sello confirmar">Por confirmar</span><span>Un supuesto razonable que conviene verificar en sitio.</span></li>
-          <li><span class="sello nd">Dato no disponible</span><span>No lo tenemos y no lo inventamos.</span></li>
-        </ul>
-        <figure class="medicion tarjeta">
+        <div class="sellos-juego" id="sellos-juego">
+          <p class="sellos-guia">Toca un sello:</p>
+          <div class="sellos-chips">
+            <button type="button" class="sello oficial sello-btn activo" data-i="0" aria-pressed="true">Dato oficial</button>
+            <button type="button" class="sello calculo sello-btn" data-i="1" aria-pressed="false">Cálculo</button>
+            <button type="button" class="sello medido sello-btn" data-i="2" aria-pressed="false">Medición propia</button>
+            <button type="button" class="sello placa sello-btn" data-i="3" aria-pressed="false">Etiqueta del panel</button>
+            <button type="button" class="sello confirmar sello-btn" data-i="4" aria-pressed="false">Por confirmar</button>
+            <button type="button" class="sello nd sello-btn" data-i="5" aria-pressed="false">Dato no disponible</button>
+          </div>
+          <div class="sellos-pantalla" aria-live="polite">
+            <p class="sello-def activo" data-i="0"><b>Dato oficial.</b> Publicado por un fabricante, la CFE u otra fuente oficial, con su referencia.</p>
+            <p class="sello-def" data-i="1"><b>Cálculo.</b> Obtenido con una fórmula que te mostramos y puedes comprobar.</p>
+            <p class="sello-def" data-i="2"><b>Medición propia.</b> Lo medimos nosotros con instrumentos y guardamos la evidencia.</p>
+            <p class="sello-def" data-i="3"><b>Etiqueta del panel.</b> Leído en la placa de datos del equipo.</p>
+            <p class="sello-def" data-i="4"><b>Por confirmar.</b> Un supuesto razonable que conviene verificar en sitio.</p>
+            <p class="sello-def" data-i="5"><b>Dato no disponible.</b> No lo tenemos y no lo inventamos.</p>
+          </div>
+        </div>
+        <figure class="medicion tarjeta plegable">
           <div class="medicion-fotos">
             <img src="assets/medicion/lectura-4.jpg" alt="Multímetro que marca 19.39 voltios de corriente directa con el panel acostado en el piso" width="360" height="290">
             <img src="assets/medicion/lectura-5.jpg" alt="Multímetro que marca 19.57 voltios de corriente directa con el panel inclinado hacia el sol" width="360" height="232">
           </div>
           <figcaption>
-            <div class="sellos-fila"><span class="sello medido">Medición propia</span><span class="sello placa">Etiqueta del panel</span></div>
+            <div class="sellos-fila"><span class="sello medido">Medición propia</span></div>
             <h3>Medimos antes de proponer</h3>
-            <p>Probamos al sol un panel Epcom PRO‑10012 de 100 W (potencia según su etiqueta). En circuito abierto, el multímetro marcó <strong>19.39 V</strong> con el panel acostado y <strong>19.57 V</strong> con el panel inclinado hacia el sol. El voltaje cambia poco con la luz; la corriente, mucho. Lo tomamos en cuenta al conectar paneles en serie y en paralelo.</p>
+            <div class="lecturas">
+              <div class="lectura"><span class="lectura-v"><span data-num="19.39" data-dec="2">19.39</span> V</span><span class="lectura-k">Panel acostado</span></div>
+              <div class="lectura"><span class="lectura-v"><span data-num="19.57" data-dec="2">19.57</span> V</span><span class="lectura-k">Inclinado al sol</span></div>
+            </div>
+            <button type="button" class="ver-mas" aria-expanded="false" aria-controls="m-1"><span>Ver más</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div class="hito-det" id="m-1"><div class="det-in"><p>Panel Epcom PRO‑10012 de 100 W <span class="sello placa">Etiqueta del panel</span>, medido al sol en circuito abierto. El voltaje cambia poco con la luz; la corriente, mucho. Lo tomamos en cuenta al conectar paneles en serie y en paralelo.</p></div></div>
           </figcaption>
         </figure>
       </div>
@@ -466,26 +498,16 @@
 
   <!-- ============ 7. Caso piloto ============ -->
   <section id="piloto">
-    <div class="contenedor dos-col piloto">
-      <div>
-        <span class="etiqueta">Proyecto piloto</span>
-        <h2>Primero, un salón de clases</h2>
-        <p class="intro">Antes de ofrecer el servicio, probamos el método completo con un aula escolar: el caso ideal, porque consume energía de día, cuando hay sol.</p>
-        <p>Levantaremos el inventario del aula, mediremos o leeremos la potencia de cada equipo, dimensionaremos el sistema con componentes reales y publicaremos el reporte completo como ejemplo.</p>
-      </div>
-      <div class="tarjeta inventario">
-        <h3>Lo que vamos a medir</h3>
-        <table>
-          <thead><tr><th scope="col">Equipo</th><th scope="col">Cantidad</th><th scope="col">Potencia</th><th scope="col">Horas/día</th></tr></thead>
-          <tbody>
-            <tr><td>Iluminación</td><td data-k="Cantidad"><span class="sello nd">Pendiente</span></td><td data-k="Potencia"><span class="sello nd">Pendiente</span></td><td data-k="Horas/día"><span class="sello nd">Pendiente</span></td></tr>
-            <tr><td>Proyector</td><td data-k="Cantidad"><span class="sello nd">Pendiente</span></td><td data-k="Potencia"><span class="sello nd">Pendiente</span></td><td data-k="Horas/día"><span class="sello nd">Pendiente</span></td></tr>
-            <tr><td>Aire acondicionado</td><td data-k="Cantidad"><span class="sello nd">Pendiente</span></td><td data-k="Potencia"><span class="sello nd">Pendiente</span></td><td data-k="Horas/día"><span class="sello nd">Pendiente</span></td></tr>
-            <tr><td>Computadoras y contactos</td><td data-k="Cantidad"><span class="sello nd">Pendiente</span></td><td data-k="Potencia"><span class="sello nd">Pendiente</span></td><td data-k="Horas/día"><span class="sello nd">Pendiente</span></td></tr>
-          </tbody>
-        </table>
-        <p class="nota-tabla">Las cifras aparecerán cuando terminemos el levantamiento. Hasta entonces no publicamos estimaciones.</p>
-      </div>
+    <div class="contenedor">
+      <span class="etiqueta">Proyecto piloto</span>
+      <h2>Primero, un salón de clases</h2>
+      <p class="intro">Probamos el método completo en un aula antes de ofrecerlo. Las cifras se publican cuando las midamos.</p>
+      <ul class="equipos">
+          <li class="equipo" style="--n:0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1 1.9V16h5v-.2c0-.8.4-1.5 1-1.9A6 6 0 0 0 12 3Z"/></svg><b>Iluminación</b><span class="sello nd">Por medir</span></li>
+          <li class="equipo" style="--n:1"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="10" rx="2"/><circle cx="15" cy="12" r="2.5"/><path d="M6 17v2M18 17v2"/></svg><b>Proyector</b><span class="sello nd">Por medir</span></li>
+          <li class="equipo" style="--n:2"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="8" rx="2"/><path d="M7 17c0 1.5 1 2 1 3M12 17c0 1.5 1 2 1 3M17 17c0 1.5 1 2 1 3M7 10h10"/></svg><b>Aire acondicionado</b><span class="sello nd">Por medir</span></li>
+          <li class="equipo" style="--n:3"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><b>Computadoras y contactos</b><span class="sello nd">Por medir</span></li>
+      </ul>
     </div>
   </section>
 
@@ -558,7 +580,8 @@
 
 <a class="arriba" href="#inicio" aria-label="Volver arriba">↑</a>
 <script>(function(){var b=document.querySelector(".arriba");if(!b)return;function f(){b.classList.toggle("visible",scrollY>innerHeight*0.8);}addEventListener("scroll",f,{passive:true});f();})();</script>
-<script src="js/tema.js?v=20261117"></script>
+<script src="js/escena.js?v=20261119"></script>
+<script src="js/tema.js?v=20261119"></script>
 <script src="js/servicio.js?v=20261117"></script>
 <script src="js/estimador.js?v=20261117"></script>
 </body>
